@@ -84,4 +84,45 @@ class ArticleController extends HomebaseController {
 		dump($tplname);
 		$this->display("add");
 	}
+	
+	function add_post(){
+		if (IS_POST) {
+			
+			
+			if(empty($_POST['term'])){
+				$this->error("请至少选择一个分类栏目！");
+			}
+			if(!empty($_POST['photos_alt']) && !empty($_POST['photos_url'])){
+				foreach ($_POST['photos_url'] as $key=>$url){
+					$photourl=sp_asset_relative_url($url);
+					$_POST['smeta']['photo'][]=array("url"=>$photourl,"alt"=>$_POST['photos_alt'][$key]);
+				}
+			}
+			$_POST['smeta']['thumb'] = sp_asset_relative_url($_POST['smeta']['thumb']);
+			 
+			$_POST['post']['post_date']=date("Y-m-d H:i:s",time());
+			$_POST['post']['post_author']=get_current_user();
+			$article=I("post.post");
+			$article['smeta']=json_encode($_POST['smeta']);
+			$article['post_content']=htmlspecialchars_decode($article['post_content']);
+			$posts_model=M("Posts");
+			$result=$posts_model->add($article);
+			if ($result) {
+				//
+				$term_relationships_model = M("TermRelationships");
+				foreach ($_POST['term'] as $mterm_id){
+					$term_relationships_model->add(array("term_id"=>intval($mterm_id),"object_id"=>$result));
+				}
+				
+				$this->success("添加成功！");
+				
+				$this->ajaxReturn(array("status"=>1,"id"=>$result['id'],"user"=>sp_get_current_user()));
+			
+			} else {
+				$this->error("添加失败！");
+			}
+			 
+		}
+	}
+	
 }

@@ -308,6 +308,7 @@ hello;
                     //$ucenter_old_user_login_msg="老用户请在跳转后，再次登陆";
                 }
         
+				cookie('W_U_L_I',$result["id"]);
                 $this->success("登录验证成功！", $redirect);
             }else{
                 $this->error("密码错误！");
