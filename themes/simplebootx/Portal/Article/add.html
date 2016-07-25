@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://www.hdb.com/post/article?tempId=105&sceneId=6&hdb_from=PCPost -->
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>发表文章-互动吧</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta charset="utf-8">
+<meta property="qc:admins" content="241045133560426375747716">
+<meta name="baidu-site-verification" content="dNifqp8wX6">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="HandheldFriendly" content="true">
+
+
+<link rel="dns-prefetch" href="http://cdn.hudongba.com/">
+<link rel="dns-prefetch" href="http://static.hudongba.com/">
+<link rel="dns-prefetch" href="http://cdn.hudongba.com/">
+<link rel="apple-touch-icon" href="http://cdn.hudongba.com/static_v4/images/other/icon_72x72.png">
+<link rel="icon" type="image/x-icon" href="http://www.hdb.com/favicon.ico" size="16x16 24x24 32x32">
+<link rel="shortcut icon" type="image/x-icon" href="http://www.hdb.com/favicon.ico">
+
+<!-- 作者：qiutian 时间：2015-06-28 描述：PC公共css-->
+  <link rel="stylesheet" href="__TMPL__Public/css/common.20160722_193720.min.css">
+  <link rel="stylesheet" href="__TMPL__Public/css/post.20160722_193720.min.css">
+<!-- endbuild -->
+<style>[ms-controller],[ms-important]{display:none}</style>
+<script src="__TMPL__Public/js/hm.js"></script>
+<script src="__TMPL__Public/js/jquery-1.7.2.min.js"></script>
+<script>
+var _pub_client = "pc";
+var _imgCdn="http://cdn.hudongba.com";
+var _domain="http://www.hdb.com/";
+var _HDB_SOURCE_KEY = "hdb_source";
+var _HDB_POS_KEY = "hdb_pos";
+var _isNoAlertUser = "";// 详情页外链点击是否不弹出提示框
+var _fmShezhi;
+var dataForShare={
+  weixin_icon:"http://cdn.hudongba.com/images/share/other_weixin_msg_3.png",
+  weixin_tl_icon:"http://cdn.hudongba.com/images/share/other_weixin_tl_3.png",
+  weixin_url:_domain,
+  qq_icon:"http://cdn.hudongba.com/images/share/other_qq_3.png",
+  weibo_icon:"http://cdn.hudongba.com/images/share/other_weibo_3.png",
+  url:_domain,
+  title:"互动吧，免费发布、传播活动，最大化享受微信传播红利。",
+  description:"互动吧，免费提供活动发布、管理、传播、收款等全环节服务，通过互动吧，您可以轻松在微信朋友圈、聊天群里组织各类活动。",
+  sms:"互动吧，免费提供活动发布、管理、传播、收款等全环节服务，通过互动吧，您可以轻松在微信朋友圈、聊天群里组织各类活动。http://hudong.ba",
+  appId:"wx2eb9d27e0e24ec11",
+  callback:function(){_$(_api3._shareCount,"info_id=0&info_type=other");}
+};
+var appInfo={
+  app_v:4.0,
+  info_v:2.1,
+  system:"",
+  pub_system:"pc"
+};
+var _config={
+  _showBtn:1
+};
+
+</script>
+<link href="__TMPL__Public/css/default.css" rel="stylesheet"></head>
+
+<body class="e7">
+
+<div class="header_public">
+  <div class="header_public_b">
+    <div class="header_public_main">
+    
+   
+    
+    
+    </div>
+  </div>
+</div>
+<div class="header_public_bot"></div>
+<script>
+//js动态创建form 提交表单
+function formSubmit(action,areaid,areaname) {
+    var turnForm = document.createElement("form");   
+    //一定要加入到body中！！   
+    document.body.appendChild(turnForm);
+    turnForm.method = 'get';
+  turnForm.action = action;
+  turnForm.target = '_blank';
+  //创建隐藏表单
+  var areaId = document.createElement("input");
+    areaId.setAttribute("name","area_id");
+    areaId.setAttribute("type","hidden");
+    areaId.setAttribute("value",areaid);
+    turnForm.appendChild(areaId);
+  var areaName = document.createElement("input");
+    areaName.setAttribute("name","area_name");
+    areaName.setAttribute("type","hidden");
+    areaName.setAttribute("value",areaname);
+    turnForm.appendChild(areaName);
+ 
+    turnForm.submit();
+}
+
+//js动态创建form 提交表单，在当前页
+function formSubmitNoBlank(action,areaid,areaname) {
+    var turnForm = document.createElement("form");   
+    //一定要加入到body中！！   
+    document.body.appendChild(turnForm);
+    turnForm.method = 'get';
+  turnForm.action = action;
+  //创建隐藏表单
+  var areaId = document.createElement("input");
+    areaId.setAttribute("name","area_id");
+    areaId.setAttribute("type","hidden");
+    areaId.setAttribute("value",areaid);
+    turnForm.appendChild(areaId);
+  var areaName = document.createElement("input");
+    areaName.setAttribute("name","area_name");
+    areaName.setAttribute("type","hidden");
+    areaName.setAttribute("value",areaname);
+    turnForm.appendChild(areaName);
+ 
+    turnForm.submit();
+}
+
+function area(id,name,flag,code){
+//  if(flag != 1 && flag != 2){
+//    _$asyn("/wap/service",{"area_id":id,"area_name":name,"areaFlag":flag});
+//    $("#addPost").attr("href","javascript:formSubmit('/post',\""+id+"\",\""+name+"\");")//发布
+//    $("#find").attr("href","javascript:formSubmit('/find/-1.html',\""+id+"\",\""+name+"\");")//找活动
+//    $("#home").attr("href","javascript:formSubmit('/',\""+id+"\",\""+name+"\");")//首页
+//    $(".user_address_t").html("<span name=\""+code+"\" id=\""+id+"\">"+name+"</span>");
+//  }
+}
+/*$("#pub_search").blur(function(){
+    setTimeout(function(){
+        $(".search_key").hide();
+    }, 200);
+});
+$("#pub_search").focus(function(){
+  $(".search_key").show();
+});*/
+$(".header_public_search").mouseover(function(){
+  $(".search_key").show();
+});
+$(".header_public_search").mouseout(function(){
+  $(".search_key").hide();
+});
+</script>
+<div class="wrap">
+  <div class="container">
+    <div id="post_form">
+      <ul class="post_main_ul">
+        <li class="post_main_li hdZt">
+          <div class="post_main_l_tit"><b class="red">*</b><span>文章标题</span></div>
+          <div id="post_main_r_K_title" class="red_outK">
+            <div class="post_main_r"><input type="text" class="post_title" id="post_article_title" oninput="dochangeTitle(&#39;post_article_title&#39;);_checkRed._title()" onpropertychange="dochangeTitle(&#39;post_article_title&#39;);_checkRed._title()" placeholder="输入文章标题" maxlength="70"></div>
+            <div class="post_main_note"><p><img src="__TMPL__Public/images/tan_icon.png" alt=""><span>请填写文章标题</span></p></div>
+          </div>
+        </li>
+        <li class="post_main_li hdRichtext">
+          <div class="post_main_l_tit"><b class="red">*</b><span>文章内容</span></div>
+          <div id="post_main_r_K_richtext" class="red_outK">
+            <div class="post_main_r post_main_r_fwb" id="main_r_richtextK" style="position:relative;">
+				<textarea id="post_article_content" noplaceholder="no" placeholder="" class="post_this_content" style="width: 100%; height: 300px; display: none; background: rgb(252, 252, 252);"></textarea>
+<div id="f"></div>
+<div id="post_article_content_richtext_bar" class="richtext_bar">
+  <ul class="bqgnK">
+    <li class="bqgnK_li02">
+      <a title="单张上传图片" ontouchstart="" href="javascript:void(0);"></a>
+      <div class="richtext_bar_pic_upfile">
+        <form id="post_article_content_upload" target="_upload" enctype="multipart/form-data" method="post" action="http://www.hdb.com/post/api:img">
+          <input id="post_article_content_upload_file" type="file" onchange="_richText._upload()" name="file" class="upInput" title="单张上传图片">
+          <input id="post_article_content_upload_type" type="hidden" name="infoType" value="article">
+        </form>
+      </div>
+    </li>
+    <li class="bqgnK_li06">
+      <a class="fwb_spA" href="javascript:void(0);" ontouchstart="" title="插入视频" onclick="_videoTc._show()"></a>
+    </li>
+   </ul>
+</div>
+            </div>
+            <div class="post_main_note">
+            	<p><img src="__TMPL__Public/images/tan_icon.png" alt=""><span>请填写文章内容</span></p>
+            	<div class="txt" style="color: rgb(0, 0, 0);">还可以输入<i>9998</i>字</div>
+            </div>
+          </div>
+        </li>
+        <li class="post_main_li hdZt">
+          <div class="post_main_l_tit"><b class="red"></b><span>允许互动吧推荐</span></div>
+          <div class="post_main_r">
+            <div class="post_main_recommend" id="post_article_private">
+              <input type="radio" name="recommend" value="0" class="select_0" onclick="_partyPostPC._fetchRecomm(0);" checked="checked"><span>允许</span>
+              <input type="radio" name="recommend" value="1" class="select_1" onclick="_partyPostPC._fetchRecomm(1);"><span>不允许</span>
+            </div>
+          </div>
+        </li>
+        <li class="post_main_li" style="display:none">
+          <div class="post_main_l_tit"><b class="red">*</b><span>验证码</span></div>
+          <div id="post_main_r_K_yzm" class="red_outK">
+            <div class="post_main_r">
+            	<input type="text" class="post_yzm" id="post_article_yzm" oninput="dochangeTitle(&#39;post_article_title&#39;);_checkRed._title();_articlePostPC._yzmBlur()" onpropertychange="dochangeTitle(&#39;post_article_title&#39;);_checkRed._title();_articlePostPC._yzmBlur()" placeholder="输入验证码" maxlength="4" style="width: 100px;float: left;">
+        		<img src="__TMPL__Public/images/captcha" alt="图形码看不清，换一张" style="width:90px;float:left;margin:0 10px;">
+        		<a id="post_article_yzm_pic" onclick="_articlePostPC._yzmChange();">图形码看不清，换一张</a>
+        	</div> 
+        	<div class="post_main_note"><p><img src="__TMPL__Public/images/tan_icon.png" alt=""><span>请填写文章标题</span></p></div>
+          </div>
+        </li>
+      </ul>
+      <div class="clear"></div>
+      <div class="agree" style="margin-top: 0;"><img src="__TMPL__Public/images/check_yes.png" alt=""><span>同意</span><a href="http://www.hdb.com/app/service_duty" target="_blank">《互动吧服务协议》</a></div>
+      <div class="fb_Btn">
+        <p class="btnYes">
+          <a class="btn_Post" href="javascript:void(0);" onclick="_articlePostPC._post(&#39;&#39;,&#39;2&#39;)">发布</a>
+          <a class="btn_Preview" href="javascript:void(0);" onclick="_articlePostPC._post(&#39;&#39;,&#39;1&#39;)">预览</a>
+        </p>
+        <p class="btnNo">
+          <a class="btn_Post thisGray" href="javascript:void(0);" onclick="_articlePostPC._post(&#39;&#39;,&#39;2&#39;)">发布</a>
+          <a class="btn_Preview thisGray" href="javascript:void(0);" onclick="_articlePostPC._post(&#39;&#39;,&#39;1&#39;)">预览</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar"></div>
+</div>
+<div id="post_article_title_t" style="display:none;"></div>
+<div id="post_article_content_t" style="display:none;"></div>
+
+
+<div class="tc_c" id="tc_checkOk">
+  <div class="baoSuccess"><img src="__TMPL__Public/images/pop_remmind_yes.png"></div>
+  <p class="bmTs_c font03">恭喜，您已通过收费功能认证，<br>可设置额度<span id="span_max_money"></span>元以内的收费活动了</p>
+  <div class="tc_c_btn" ontouchstart=""><a class="font02" ontouchstart="" onclick="_attestOk._yes()">知道了</a></div>
+</div>
+<div id="tc_bdCard" class="tcGetiao" style="display:none;">
+  <div class="tcTop">
+  <p class="yhName">设置收款账户</p><a href="javascript:void(0);" class="guanBtn"><img onclick="_bindBank._hide()" ontouchstart="" src="__TMPL__Public/images/share_qr_close3.png" alt="" title="关闭"></a></div>
+  <p class="miaoShu2m">首次发布付费信息，请提供接收你的活动费用打款的银行卡账户</p>
+  <div class="blueBtn"><a href="http://www.hdb.com/bank/party">绑定银行卡</a></div>
+</div>
+<div class="tc_c" id="kaitongsf">
+  <div class="tc_c_nr">
+    <p class="tc_c_nr_txt2 font02" id="p_dt_title">请先联系客服开通收费功能<br>电话：400-0821-222<br>邮箱：team@jootun.com</p>
+  </div>
+  <div class="tc_c_btn" onclick="_bindBank._hide()" ontouchstart=""><a class="font02">知道了</a></div>
+</div>
+  <iframe id="post_upload_iframe" name="_upload"></iframe>
+  <div id="post_map">
+      <iframe id="post_map_iframe"></iframe>
+  </div>
+
+  <div class="tc_c" id="moreGn">
+    <h1 class="moregn_h1">下载App使用高级功能</h1>
+    <div class="olOut">
+    <ol id="moregn_ol_vote" class="moregn_ol"><li>设置投票邀请码，发布你的私密投票</li><li>即时收取投票、评论通知，随时关注投票进展</li><li>添加图片和表情，编辑字体颜色、尺寸</li></ol>
+    <ol id="moregn_ol_party" class="moregn_ol"><li>添加更多报名项目，设置报名费用和报名人数</li><li>添加图片和视频，编辑字体颜色、大小</li><li>发布后管理报名人员，收集报名信息</li></ol>
+    <ol id="moregn_ol_article" class="moregn_ol"><li>即时收取评论通知，随时了解文章关注度</li><li>添加图片和表情，编辑字体颜色、尺寸</li><li>其他高级发布功能，更多特色玩法</li></ol>
+    </div>
+    <div class="moregn_btn"><a onclick="_g(_postLink._appDownload);" href="javascript:void(0)" class="l">立即下载</a><a onclick="_moreGn._hide();" href="javascript:void(0)" class="r">稍后再说</a></div>
+  </div>
+
+  <div class="tc_c" id="tc_video">
+    <div class="tc_c_close"><div><img title="关闭" onclick="_videoTc._hide()" ontouchstart="" src="__TMPL__Public/images/share_qr_close3.png"></div></div>
+    <div class="tc_c_title"><p>请粘贴视频地址到下面的输入框</p></div>
+    <div class="tc_c_nr"><input name="" type="text" id="media_input"></div>
+    <div class="tc_c_ts2"><p>目前仅支持腾讯和优酷视频</p></div>
+    <div class="tc_c_btn" ontouchstart="" onclick="_richText._mov()"><a>插入</a></div>
+  </div>
+
+<div class="footer_gray">
+	<div class="footer_gray_content">
+		<div class="top">
+			<div class="left">
+				<dl>	
+					<dt>互动吧</dt>
+					<dd><a href="http://www.hdb.com/about" target="_blank" rel="nofollow">关于我们</a></dd>
+					<dd><a href="http://www.hdb.com/news.html" target="_blank" rel="nofollow">新闻动态</a></dd>
+					<dd><a href="http://www.hdb.com/contactus" target="_blank" rel="nofollow">联系我们</a></dd>
+				</dl>
+				<dl>
+					<dt>推广合作</dt>
+					<dd><a href="http://www.hdb.com/market_info.html" target="_blank" rel="nofollow">广告合作</a></dd>
+					<dd><a href="http://www.hdb.com/market_info.html" target="_blank" rel="nofollow">分站代理合作</a></dd>
+					<dd><a href="http://www.hdb.com/market_info.html" target="_blank" rel="nofollow">市场合作</a></dd>
+					<dd><a href="http://www.hdb.com/market_info.html" target="_blank" rel="nofollow">活动场地入驻</a></dd>
+				</dl>
+				<dl>
+					<dt>更多</dt>
+					<dd><a href="http://www.hdb.com/help" target="_blank" rel="nofollow">帮助中心</a></dd>
+					<dd><a href="http://www.hdb.com/joinus" target="_blank" rel="nofollow">招聘英才</a></dd>
+					<dd><a href="http://www.hdb.com/sitemap.html" target="_blank">网站地图</a></dd>
+				</dl>
+			</div>
+			<div class="right">
+				<ul class="right_ul">
+					<li class="right_li">
+						<p class="title">微信公众号</p>
+						<img src="__TMPL__Public/images/guanzhu_ewm.png" alt="微信公众号">
+						<p class="txt">搜索：hudong_ba</p>
+					</li>
+					<li class="right_li">
+						<p class="title">互动吧App</p>
+						<img src="__TMPL__Public/images/index_b_img2.png" alt="互动吧App">
+						<p class="txt">扫描二维码下载</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="bottom" id="footer_info">
+		<p class="txt cen" style="padding-bottom:25px">Jootun团队 版权所有 ICP备13046454号 京公网安备11010502025080</p>
+	</div>
+</div>
+
+
+
+<div id="tc_login" class="tc_login">
+  <div class="tc_login_close"><a href="javascript:void(0)" title="关闭" onclick="_login4._hide(&#39;tc_login&#39;)"><img src="__TMPL__Public/images/share_qr_close_20.png" alt=""></a></div>
+  <!--HDB登录-->
+  <div class="login_HDB">
+    <p class="tit">您还没登录，请登录</p>
+    <div class="error_ts"></div>
+    <div class="k_sj"><span></span><input name="" type="text" placeholder="输入手机号" id="lg_form_account" data-form-un="1469342278351.767"></div>
+    <div class="k_mm"><span></span><input name="" type="password" placeholder="输入密码" id="lg_form_password" data-form-pw="1469342278351.767"></div>
+    <a class="login_Btn" href="javascript:void(0)" onclick="_login4._post()">登录</a>
+  </div>
+  <!--微信登录-->
+  <div class="login_Weixin" style="display:none;">
+    <p class="tit">微信登录</p>
+    <p class="txt_ts">请用微信“扫一扫”下面二维码，并根据提示操作</p>
+    <p class="pic_2wm"><img src="__TMPL__Public/images/loading2.gif" alt="" id="lm_qr_qr_pic" style="width:80px;height:80px;margin:40px auto;"></p>
+    <a class="login_Btn" href="javascript:void(0)" onclick="_loginWithQr._post()">我已完成扫描并授权登录</a>
+  </div>
+    <script>
+        var _sid = "";
+    </script>
+  
+  <div class="forget"><input name="" type="checkbox" value="" checked="checked"> <span>下次自动登录</span><a href="http://www.hdb.com/forget">忘记密码？</a></div>
+  <div class="login_icon">
+    <span>或使用其他账号登录：</span>
+    <a href="javascript:void(0)" class="login_icon_Qq" onclick="_user._loginWithSnp(&#39;qq&#39;)"></a>
+    <a href="javascript:void(0)" class="login_icon_Wb" onclick="_user._loginWithSnp(&#39;weibo&#39;)"></a>
+    <a href="javascript:void(0)" class="login_icon_Wx" onclick="_login4._wx()"></a>
+    <a href="javascript:void(0)" class="login_icon_Hd" onclick="_login4._hdb()" style="display:none;"></a>
+  </div>
+  <div class="noHao">我还没有账号，<a href="{:U('user/register/index')}">我要注册</a></div>
+</div>
+
+<div class="indexTc" id="indexTc">
+  <div class="guanbiQu"><a href="javascript:void(0);" onclick="_tc._hide(&#39;indexTc&#39;);"><img src="__TMPL__Public/images/share_qr_close3.png" alt=""></a></div>
+  <ul class="top qieHover">
+    <li class="firstLi thisOver" id="sjB" onclick="_hdbQr._tab(&#39;sjB&#39;,&#39;sjBan&#39;);">下载App</li>
+    <li id="wxB" onclick="_hdbQr._tab(&#39;wxB&#39;,&#39;wxBan&#39;);">关注微信公众号</li>
+  </ul>
+  <ul class="tcNr">
+    <li id="sjBan">
+      <p class="tc_tt">扫一扫下方二维码下载App ，获取完整体验</p>
+      <div class="tc_Ma2">
+        <img src="__TMPL__Public/images/ma02.jpg" alt="">
+        <a href="javascript:void(0);" class="xia_i" onclick="_downloadObj._iPhone()"><img src="__TMPL__Public/images/mb_icon_apple.png" alt=""><span>iPhone下载</span></a>
+        <a href="javascript:void(0);" class="xia_a" onclick="_downloadObj._android()"><img src="__TMPL__Public/images/mb_icon_android.png" alt=""><span>Android下载</span></a>
+      </div>
+    </li>
+    <li id="wxBan" style="display:none;">
+      <p class="tc_tt">打开微信，扫一扫下方二维码</p>
+      <p class="tc_img"><img src="__TMPL__Public/images/ma01.jpg" alt=""></p>
+      <p class="tc_gz">或者搜索并关注微信公众帐号：hudong_ba</p>
+    </li>
+  </ul>
+</div>
+
+<input name="" type="text" id="login_Way" hidden="hidden">
+  <div class="loadingDiv" id="loadingDiv" style="display:none;"><p class="pImg"><img src="__TMPL__Public/images/loading2.gif"></p><p class="pTxt"></p></div>
+  <div id="cover" style="display: none; opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
+  <div id="cover2"></div>
+  <div id="toast" class="toast"></div>
+  <div id="loading_center" class="loading_center">
+    <div><img src="__TMPL__Public/images/loading2.gif"></div>
+    <div id="loading_center_text"></div>
+  </div>
+  <div id="alert" class="alert">
+    <div id="alert_title"></div>
+    <div id="alert_text"></div>
+    <div id="alert_button"><button id="alert_button_ok" class="button_3" ontouchstart=""></button></div>
+    <div id="alert_cancel" class="alert_cancel" ontouchstart="" onclick="_alert._hide()"></div>
+  </div>
+  <div id="tc_bmSuccess" style="display: none; z-index: 9999; position: fixed; left: 50%; top: 50%; margin-top: -40px; margin-left: -125px;">
+    <div class="baoSuccess"><img src="__TMPL__Public/images/pop_remmind_yes.png" class="successDui"><p id="sucess_text"></p></div>
+  </div>
+  <div class="tc_c" id="appDownts">
+    <p class="appDownts_h1">下载互动吧App</p>
+    <div class="appDownts_nr">
+      <p>使用互动吧App，随身查看活动报名情况</p>
+    </div>
+    <div class="appDownts_btn"><a onclick="_g(_postLink._appDownload);" href="javascript:void(0)" class="l">立即下载</a><a onclick="_tc._hide(&#39;appDownts&#39;);" href="javascript:void(0)" class="r">稍后再说</a></div>
+  </div>
+<div id="div_topbar_title" style="display:none;">发布文章</div>
+<div id="share_weixin" onclick="_shareInWeixin._hide()">
+  <div><img id="share_weixin_guide"></div>
+  <div><button ontouchstart="" class="button_3">关闭提示</button></div>
+</div>
+<div id="share_qq" onclick="_shareInQq._hide()">
+  <div><img id="share_qq_guide"></div>
+  <div><button ontouchstart="" class="button_3">关闭提示</button></div>
+</div>
+<div class="tc_c" id="tc_2weima">
+  <div class="tc_c_close"><div><img title="关闭" onclick="_joinQr._hide()" ontouchstart="" src="__TMPL__Public/images/share_qr_close3.png"></div></div>
+  <div class="tc_c_title"><p class="font02">报名凭证</p></div>
+  <div class="tc_c_nr">
+    <p class="tc_c_nr_txt font03" id="p_dt_title"></p>
+    <div class="tc_c_nr_pic tc_c_nr_pic_2 tc_c_nr_pic_5"><strong><img class="weima2 weima2_2" id="join_qr_img" src="__TMPL__Public/images/loading2.gif"></strong></div>
+    <div class="tc_c_ts2 font04">
+        
+      <p class="bmTs_c font03"><a href="http://www.hdb.com/find/">更多精彩活动 &gt;</a></p>
+    </div>
+    <div class="tc_c_btn" ontouchstart="" onclick="_joinQr._download()" style="margin-top:10px;"><a class="font02">保存</a></div>
+    <div class="tc_c_btn_load" ontouchstart=""><p><span class="font02">正在保存</span><img class="tc_c_btn_loading" src="__TMPL__Public/images/loading2.gif"></p></div>
+  </div>
+</div>
+
+<div class="tc_c" id="share_qr" style="display:none;">
+  <div class="tc_c_close"></div>
+  <div class="tc_c_title"><p class="font02">发送给好友</p></div>
+  <div class="tc_c_nr">
+    <p class="tc_c_nr_txt font03 txtP">1. 使用微信/手机QQ/微博客户端扫描以下二维码</p>
+    <div class="tc_c_nr_pic"><img class="weima2" id="share_qr_img" src="__TMPL__Public/images/loading2.gif"></div>
+      <p class="tc_c_nr_txt font03 txtP">2. 使用这些客户端的分享功能将信息发送给好友</p>
+  </div>
+  <div class="tc_c_btn" ontouchstart=""><a class="font02" onclick="_qr._hide()" ontouchstart="">关闭提示</a></div>
+</div>
+<div class="tc_c" id="share_qr_1">
+  <div class="tc_c_close"><div><img title="关闭" onclick="_qr._hide()" ontouchstart="" src="__TMPL__Public/images/share_qr_close3.png"></div></div>
+  <div class="tc_c_title"><p class="font02">分享二维码</p></div>
+  <div class="tc_c_nr">
+    <p class="tc_c_nr_txt font03" id="p_dt_title"></p>
+    <div class="tc_c_nr_pic"><img class="weima2" id="share_qr_1_img" src="__TMPL__Public/images/loading2.gif"></div>
+    <div class="tc_c_ts font04">长按图片保存</div>
+    <p class="tc_c_nr_txt font03" id="p_dt_title">可用于印刷品、幻灯片等其他方式的宣传</p>
+  </div>
+  <div class="tc_c_btn" ontouchstart="" onclick="_qr._download()"><a class="font02">保存</a></div>
+  <div class="tc_c_btn_load" ontouchstart=""><p><span class="font02">正在保存</span><img class="tc_c_btn_loading" src="__TMPL__Public/images/loading2.gif"></p></div>
+</div>
+<div id="login">
+  <div class="tc_c_close"><div><img title="关闭" onclick="_login._hide()" ontouchstart="" src="__TMPL__Public/images/share_qr_close3.png"></div></div>
+  <div class="login_title">离成功只差登录</div>
+  <div id="login_button"></div>
+  <div class="login_more"><a href="javascript:_g(_link._login)" class="gray">使用其它方式登录</a></div>
+</div>
+<div id="seo" style="height:1px;overflow:hidden;margin-top:-1px;">
+  <a href="http://www.hdb.com/" style="color:#dddddd;font-size:1px">互动吧</a>
+  <a href="http://www.hdb.com/showinfo/page/1" style="color:#dddddd;font-size:1px;">活动列表</a>
+  <a href="http://www.hdb.com/post" style="color:#dddddd;font-size:1px">互动吧-发布首页</a>
+  <a href="http://www.hdb.com/post/vote" style="color:#dddddd;font-size:1px">互动吧-发布投票</a>
+  <a href="http://www.hdb.com/post/party" style="color:#dddddd;font-size:1px">互动吧-发布活动</a>
+  <a href="http://www.hdb.com/post/article" style="color:#dddddd;font-size:1px">互动吧-发布文章</a>
+  <a href="http://www.hdb.com/find" style="color:#dddddd;font-size:1px">互动吧-热门活动</a>
+</div>
+<script>
+var _post = {
+  _id: "",
+  _type: "article",
+  _isView: "",
+  _sceneId: "6",
+  _defaultScene:6,
+  _isPrivate: "",
+  _tmpId : "",
+  _tempId: "105",
+  _defaultSceneId : 6,
+  _info_state : "",//6是已屏蔽
+  _need_verify_code : "0"
+};
+</script>
+  <script src="__TMPL__Public/js/comm.20160722_193720.min.js"></script>
+  <script src="__TMPL__Public/js/jquery_date.js"></script>
+  <script src="__TMPL__Public/js/kindeditor_160119.js"></script>
+  <script src="__TMPL__Public/js/hdb_richtext_160114.js"></script>
+  <script src="__TMPL__Public/js/post.20160722_193720.min.js"></script>
+  <script src="__TMPL__Public/js/notice.js"></script>
+  <script src="__TMPL__Public/js/json2.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?694932821b7c606e6eb3984aa634ee90";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+
+var editor = KindEditor.create('#post_article_content', {
+    items:['fontsize','forecolor','bold','underline','multiimage','image','media'],
+    htmlTags:{
+    span : ['.color','.font-size','.font-weight','.text-decoration'],
+    img : ['src', 'width', 'height','class'],
+    'br,strong,p,u' : [],
+    embed:['id','class','height','src','width','wmode','imgsrc']
+    },
+    pasteType:1,
+    resizeType:1,
+    resizeMode:1,
+    useContextmenu:true,
+    formatUploadUrl:false,//表情是否保存域名
+    uploadJson : _domain + 'post/api:img?returnType=json&infoType=' + _post._type,
+    afterFocus:function(){
+      _richText._onFocus();
+      $(".hdRichtext").addClass("blue");
+      $(".k_site_K,.k_site_K3,.k_site_K7,.date_selector").hide();
+      $(".k_site,.k_style,.post_style_K,.k_time_date").removeClass("blue");
+      $("#sDateYMD,#eDateYMD,#endtimeYMD,#vote_end_ymd").parent().children(".date_selector").remove();
+      $('.post_tiMe1,.post_tiMe2,.post_tiMe3').date_input();
+    },
+    afterBlur:function(){
+      _richText._onBlur();
+      $(".hdRichtext").removeClass("blue");
+    },
+    afterCreate:function(){
+      _richText._black();
+    },
+    afterChange:function(){
+       _articlePostPC._btnShow();
+       _checkRed._richText();
+       //文字长度显示
+       _txt_num(20000);
+    }
+  });
+_txt_num = function(number){
+    var aa = editor.text();
+    _HdbToolbar._text = aa.replace(/<img[^>]*\/>/g,"").replace(/<embed[^>]*\/>/g,"").replace(/\s*/g, "");
+    var _len = _._len(_HdbToolbar._text);
+		if( number -_len>=0){ 
+			var num = parseInt(( number -_len)/2);
+			$('.post_main_note .txt').html("还可以输入<i>"+num+"</i>字").css({"color":"#000"});
+		}else{
+			var num = Math.ceil((_len-number )/2)
+			$('.post_main_note .txt').html("已经超过"+num+"字").css({"color":"#eb6877"});
+		}
+   }
+</script>
+<script>
+$(document).ready(function() {
+  if(_post._info_state == '6' || _post._info_state == '7'){
+    $(".btn_Post").html('提交审核');
+  }
+});
+</script>
+
+
+</body></html>

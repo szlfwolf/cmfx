@@ -78,4 +78,10 @@ class ArticleController extends HomebaseController {
     	}
     	
     }
+	
+	public function add()
+	{
+		dump($tplname);
+		$this->display("add");
+	}
 }

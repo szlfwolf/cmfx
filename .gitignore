@@ -1,0 +1,7 @@
+*.project
+/data/conf/db.php
+/data/install.lock
+/data/runtime/Cache
+/data/runtime/Data
+/data/runtime/Logs
+/data/runtime/Temp
