@@ -15,7 +15,8 @@ class PostController extends HomebaseController {
 
 	//文章内页
 	public function index() {
-		$this->display(":post");
+		
+		$this->theme(C('DEFAULT_THEME'))->display(":post");
 	}
 	
 	public function nav_index(){

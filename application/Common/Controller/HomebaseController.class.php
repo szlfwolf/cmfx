@@ -10,6 +10,16 @@ class HomebaseController extends AppframeController {
 	
 	function _initialize() {
 		parent::_initialize();
+		
+		//移动设备浏览，则切换模板
+        if (ismobile()) {
+            //设置默认默认主题为 Mobile
+            C('SP_DEFAULT_THEME','simplebootx_Mobile');
+			
+			//dump(array("ismobile:yes" , C('SP_DEFAULT_THEME')));
+        }
+		//else { dump(array("ismobile:no" , C('SP_DEFAULT_THEME')));}
+		
 		$site_options=get_site_options();
 		$this->assign($site_options);
 		$ucenter_syn=C("UCENTER_ENABLED");
@@ -34,6 +44,8 @@ class HomebaseController extends AppframeController {
 		if(sp_is_user_login()){
 			$this->assign("user",sp_get_current_user());
 		}
+		
+
 		
 	}
 	
