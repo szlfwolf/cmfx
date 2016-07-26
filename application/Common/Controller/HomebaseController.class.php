@@ -14,7 +14,7 @@ class HomebaseController extends AppframeController {
 		//移动设备浏览，则切换模板
         if (ismobile()) {
             //设置默认默认主题为 Mobile
-            C('SP_DEFAULT_THEME','simplebootx_Mobile');
+            C('SP_DEFAULT_THEME','simplebootx_mobile');
 			
 			//dump(array("ismobile:yes" , C('SP_DEFAULT_THEME')));
         }
