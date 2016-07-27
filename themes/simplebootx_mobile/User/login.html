@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$site_name}</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+<meta name="author" content="ThinkCMF">
+<tc_include file="Public:head" />
+<link href="__TMPL__Public/css/other.css" rel="stylesheet">
+<style>
+.control-label{
+	font-weight: bold;
+	float: left;
+	width: 70px;
+}
+</style>
+</head>
+	<body>
+		<div class="outSide">
+ <div class="registQu" id="div_login">
+ 	<form class="form-horizontal js-ajax-forms" action="{:U('user/login/dologin')}" method="post">
+    <ul class="dl_kuangQuyu registBoot1" id="login2_form">
+      <li class="firstLi">
+        <div class="dl_kuang_c"><input id="input_username" name="username" type="text" class="zc_sjK" placeholder="输入邮箱/手机号"></div>
+      </li>
+      <li>
+        <div class="dl_kuang_c"><input id="input_password" name="password" type="password" class="zc_sjK mmkTxt" placeholder="输入密码"></div>
+      </li>
+    </ul>
+    <div id="div_hdb_login" class="yellowBtn"><a href="javascript:void(0);" onclick="doLogin()" ontouchstart="">登录</a></div>
+    <div class="wangMm"><a href="/forget">忘记密码？</a>　</div>
+    </form>
+  </div>
+  <div id="div_wei_login" class="greenBtn" ontouchstart="" onclick="_user._loginWithSnp('weixin')" style="display: none;">
+  <a id="lg_partner_weixin_text" href="javascript:void(0);" ontouchstart="" onclick="_user._loginWithSnp('weixin')">微信登录</a>
+  </div>
+  <p class="dlTs_c" id="p_login" style="display: none;">在微信中使用互动吧的用户，可选此方式登录</p>
+  <div class="huiTiao">
+  	<span>使用其他帐号登录</span>
+  </div>
+  <ul class="otherDl">
+  	<li id="li_weiXin" class="dl_weixin" ontouchstart="" onclick="_user._loginWithSnp('weixin')"><a href="javascript:void(0);">微信</a></li>
+    <li id="li_qq" class="dl_tencent" ontouchstart="" onclick="_user._loginWithSnp('qq')"><a href="javascript:void(0);">QQ</a></li>
+  	<li id="li_weibo" class="dl_weibo" ontouchstart="" onclick="_user._loginWithSnp('weibo')"><a href="javascript:void(0);">微博</a></li>
+    <li id="li_hdb" class="dl_hudongba" ontouchstart="" onclick="_login2._change()" style="display: none;"><a href="javascript:void(0);">互动吧</a></li>
+  </ul>
+  <div class="zhuceP"><p><a href="/register" ontouchstart="">这些帐号我都没有，<span>我要注册</span></a></p></div>
+</div>
+
+<tc_include file="Public:scripts"/>
+<script type="text/javascript">
+function doLogin(data) {
+	$("form").submit();
+}
+</script>
+
+	</body>
+</html>

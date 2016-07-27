@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$site_name}</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+<meta name="author" content="ThinkCMF">
+<tc_include file="Public:head" />
+<link href="{$tmpl_base}Public/css/post.min.css" rel="stylesheet">
+<style>
+.control-label{
+	font-weight: bold;
+	float: left;
+	width: 70px;
+}
+</style>
+</head>
+<body>
+	<div class="outSide" id="post_form" style="min-height: 640px;">
+		<form class="form-horizontal js-ajax-forms" action="{:U('Post/post_article')}" method="post">
+  <!--文章标题 start-->
+  <div class="post_title" id="post_article_title_div">
+  	<span class="post_title_span">文章标题：</span>
+  	<p class="post_title_p"><input name="" type="text" onblur="" class="post_title_input" id="post_article_title"></p>
+  </div>
+  <!--文章标题 end-->
+  
+  <!--文章详情-->
+  <!--文章详情 start-->
+  <div class="ke_container" id="ke_article_container_div">
+  	<div class="ke_edit_top">文章详情</div>
+  	<div class="ke_edit"><textarea hidefocus="true" class="ke_edit_textarea" id="post_article_content"></textarea></div>
+  </div>
+  <!--文章详情 end-->
+  
+
+  
+  <!--允许推荐-->
+  <div ontouchstart="" onclick="_checkbox._check('post_article_private')" class="form_checkbox">
+    <div class="form_checkbox_text">允许互动吧推荐</div>
+    <div class="form_checkbox_check">
+      <img id="post_article_private" src="http://cdn.hudongba.com/static_v4/images/post/checkbox2x.png">
+    </div>
+  </div>
+  
+  <!--app下载转化、用户协议 start-->
+<div class="post_appDown"><ul><li><span>●</span> 发布时设置活动费用，在线收款</li><li><span>●</span> 添加图片，编辑不同样式文字</li><li><span>●</span> 支持手机验票，数字码验票</li></ul><p><a href="javascript:void(0)" onclick="_download('/download_guide_new?from_z=wap_post')" ontouchstart="">下载App，体验新功能</a></p></div>
+<div class="post_agreement"><p class="post_agreement_p">我同意<a href="/app/service_duty" class="post_agreement_A" ontouchstart="">《互动吧服务协议》</a></p></div>
+  <!--app下载转化、用户协议 end-->
+  
+  <!--发布按钮 start-->
+  <div class="post_btn"><a href="javascript:void(0);" class="post_btn_A" onclick="postArticle()" ontouchstart="">发布</a></div>
+  <!--发布按钮 end-->
+  
+  </form>
+  
+</div>
+
+<tc_include file="Public:scripts"/>
+<script type="text/javascript">
+function postArticle(data) {
+	alert('post');
+	$("form").submit();
+}
+</script>
+</body>
+</html>

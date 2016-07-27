@@ -16,20 +16,17 @@ class PostController extends HomebaseController {
 	//文章内页
 	public function index() {
 		
-		$this->theme(C('DEFAULT_THEME'))->display(":post");
+		$this->theme(C('DEFAULT_THEME'))->display("post");
 	}
 	
-	public function nav_index(){
-		$navcatname="文章分类";
-		$datas=sp_get_terms("field:term_id,name");
-		$navrule=array(
-				"action"=>"List/index",
-				"param"=>array(
-						"id"=>"term_id"
-				),
-				"label"=>"name");
-		exit(sp_get_nav4admin($navcatname,$datas,$navrule));
-		
+	public function article(){
+		$this->display("article");
+	}
+	
+	public function post_article(){
+		if(IS_POST){
+			$this->display(":post");
+		}
 	}
 	
 }
