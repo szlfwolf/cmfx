@@ -26,6 +26,10 @@
       <li>
         <div class="dl_kuang_c"><input id="input_password" name="password" type="password" class="zc_sjK mmkTxt" placeholder="输入密码"></div>
       </li>
+      <li>
+      	<div class="dl_kuang_c"><input type="text" id="input_verify" name="verify"  placeholder="验证码" style="width:120px;">
+							{:sp_verifycode_img('length=4&font_size=14&width=100&height=34&charset=2345678&use_noise=1&use_curve=0')}</div>
+      </li>
     </ul>
     <div id="div_hdb_login" class="yellowBtn"><a href="javascript:void(0);" onclick="doLogin()" ontouchstart="">登录</a></div>
     <div class="wangMm"><a href="/forget">忘记密码？</a>　</div>

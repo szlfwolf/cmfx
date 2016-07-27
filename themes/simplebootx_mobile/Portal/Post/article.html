@@ -17,11 +17,11 @@
 </head>
 <body>
 	<div class="outSide" id="post_form" style="min-height: 640px;">
-		<form class="form-horizontal js-ajax-forms" action="{:U('Post/post_article')}" method="post">
+<form class="form-horizontal js-ajax-forms" action="{:U('Post/post_article')}" method="post" enctype="multipart/form-data">
   <!--文章标题 start-->
   <div class="post_title" id="post_article_title_div">
   	<span class="post_title_span">文章标题：</span>
-  	<p class="post_title_p"><input name="" type="text" onblur="" class="post_title_input" id="post_article_title"></p>
+  	<p class="post_title_p"><input name="" type="text" onblur="" class="post_title_input" id="title"></p>
   </div>
   <!--文章标题 end-->
   
@@ -29,7 +29,7 @@
   <!--文章详情 start-->
   <div class="ke_container" id="ke_article_container_div">
   	<div class="ke_edit_top">文章详情</div>
-  	<div class="ke_edit"><textarea hidefocus="true" class="ke_edit_textarea" id="post_article_content"></textarea></div>
+  	<div class="ke_edit"><textarea hidefocus="true" class="ke_edit_textarea" id="content"></textarea></div>
   </div>
   <!--文章详情 end-->
   
