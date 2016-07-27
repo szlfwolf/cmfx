@@ -138,6 +138,7 @@ INSERT;
            		    switch ($rev_event['event']){
            		        case TpWechat::EVENT_MENU_CLICK:
            		            //TODO:CLICK事件
+           		            $weObj->text('该栏目正在加紧建设中!')->reply();
            		            break;
            		        case TpWechat::EVENT_SUBSCRIBE:
            		            /* 如果公众号没有认证,则不能拉取用户信息 */
